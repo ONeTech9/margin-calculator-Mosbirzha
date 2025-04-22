@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -52,7 +51,7 @@
 
     async function fetchUSDRUB() {
       try {
-        const response = await fetch("https://api.exchangerate.host/latest?base=USD&symbols=RUB");
+        const response = await fetch("https://open.er-api.com/v6/latest/USD");
         const data = await response.json();
         const price = data.rates.RUB;
         document.getElementById("currentPrice").value = price.toFixed(2);
